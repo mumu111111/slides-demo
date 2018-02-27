@@ -1,0 +1,40 @@
+*{
+    margin: 0; 
+    padding: 0;
+}
+*{
+    box-sizing: border-box;
+}
+.window{/*窗口宽高与 图片一样大 */
+    width: 400px;
+    height: 300px;
+    margin: 40px auto;
+    overflow: hidden;
+}
+
+.images{
+    position: relative;
+}
+
+.images > img{
+    width: 100%;  /*就代表400px; 只是后面要用宽度移动*/
+    position: absolute;
+    top: 0;
+    transition: all 1500ms;
+}
+
+
+.images > img.current{/*当前*/
+    left: 0;
+    transform: translateX(0);
+    z-index: 1;
+}
+
+.images > img.leave{/*离开*/
+    transform: translateX(-100%);
+    z-index: 1;
+}
+
+.images > img.enter{/*进入*/
+    transform: translateX(100%)
+}
