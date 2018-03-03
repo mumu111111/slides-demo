@@ -1,40 +1,40 @@
 *{
-    margin: 0; 
-    padding: 0;
+    margin:0;
+    padding:0;
 }
 *{
     box-sizing: border-box;
 }
-.window{/*窗口宽高与 图片一样大 */
-    width: 400px;
-    height: 300px;
-    margin: 40px auto;
-    overflow: hidden;
+body{
+    background: #eee;
 }
-
+.container{
+    width: 920px;
+    margin: 30px auto;
+}
+.window{
+  width: 920px;
+  height: 400px;
+  overflow: hidden;
+}
 .images{
-    position: relative;
+  display: flex;
+  transition: all 2s;
 }
-
 .images > img{
-    width: 100%;  /*就代表400px; 只是后面要用宽度移动*/
-    position: absolute;
-    top: 0;
-    transition: all 1500ms;
+  width: 100%;
 }
-
-
-.images > img.current{/*当前*/
-    left: 0;
-    transform: translateX(0);
-    z-index: 1;
+.buttons{
+    background: url(./images/panel.jpg) no-repeat center;
+    width: 920px;
 }
-
-.images > img.leave{/*离开*/
-    transform: translateX(-100%);
-    z-index: 1;
+.buttons button{
+    padding: 4px 6px;
+    margin-left: 17px;
+    margin-right: 17px;
+    border-color: #B8A8A8;
+    border-radius: 5px;
 }
-
-.images > img.enter{/*进入*/
-    transform: translateX(100%)
+.buttons button.active{
+    box-shadow: 0px 3px 17px 0px rgba(0,0,0,0.51);
 }

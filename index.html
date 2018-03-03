@@ -1,19 +1,34 @@
 <!DOCTYPE html>
 <html lang="zh-Hans">
 <head>
-    <meta charset="UTF-8">
-    <title>无缝轮播</title>
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <title>无缝的轮播</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+  <div class="container">
     <div class="window">
-        <div class="images">
-            <img src="./1.png" alt="图片" width='400' height='300'>
-            <img src="./2.png" alt="图片" width='400' height='300'>
-            <img src="./3.png" alt="图片" width='400' height='300'> 
-        </div>
+      <div id="slides" class="images">
+        <img src="./images/macbook.jpg" alt="图片" width="920" height="400">
+        <img src="./images/iphone.jpg" alt="图片" width="920" height="400">
+        <img src="./images/imac.jpg" alt="图片" width="920" height="400">
+        <img src="./images/info.jpg" alt="图片" width="920" height="400">
+      </div>
     </div>
-    <script src="./jquery.min.js"></script>
-    <script src="./main.js"></script>
+    <!-- <div id="controls" style="text-align:center;">
+      <button id="previous">上一张</button>
+      <button id="next">下一张</button>
+    </div> -->
+    <div id=buttonWrapper class="buttons" style="text-align:center;">
+      <button>
+        <img src="./images/macbook.png" alt="">
+      </button>
+      <button><img src="./images/thumb_iphone.png" alt=""></button>
+      <button><img src="./images/thumb_imac.png" alt=""></button>
+      <button><img src="./images/thumb_about.png" alt=""></button>
+    </div>
+  </div>
+  <script src="./jquery.min.js"></script>
+  <script src="./main.js"></script>
 </body>
 </html>
